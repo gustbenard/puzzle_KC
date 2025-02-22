@@ -57,9 +57,10 @@ class PuzzleGame:
             try:
                 os.makedirs(self.assets_dir)
             except Exception as e:
-                print(f"Impossible de créer le dossier assets : {e}")
-                print("Le jeu continuera avec le dossier existant")
-
+                # print(f"Impossible de créer le dossier assets : {e}")
+                # print("Le jeu continuera avec le dossier existant")
+                pass
+        
         # Initialisation de la fenêtre maximisée
         info = pygame.display.Info()
         self.window_size = (info.current_w - 20, info.current_h - 80)
@@ -122,7 +123,7 @@ class PuzzleGame:
                 GRID_SIZE = (6, 8)  # Plus de pièces en hauteur
                 
         except Exception as e:
-            print(f"Erreur lors du chargement de l'image {image_path}: {e}")
+            # print(f"Erreur lors du chargement de l'image {image_path}: {e}")
             sys.exit(1)
 
     def create_puzzle_pieces(self):
@@ -215,8 +216,8 @@ class PuzzleGame:
                     self.selected_piece = None
                     
                     # Afficher l'état du puzzle après le mouvement
-                    print("\nMouvement effectué !")
-                    self.print_pieces_grid()
+                    # print("\nMouvement effectué !")
+                    # self.print_pieces_grid()
                     return
 
     def check_win(self):
@@ -286,7 +287,7 @@ class PuzzleGame:
             else:
                 return {}
         except Exception as e:
-            print(f"Erreur lors du chargement des scores : {e}")
+            # print(f"Erreur lors du chargement des scores : {e}")
             return {}
 
     def save_score(self):
@@ -319,7 +320,8 @@ class PuzzleGame:
             self.highscores = scores
             
         except Exception as e:
-            print(f"Erreur lors de la sauvegarde du score : {e}")
+            # print(f"Erreur lors de la sauvegarde du score : {e}")
+            pass
 
     def draw_home_button(self):
         pygame.draw.rect(self.screen, self.home_button_color, self.home_button)
@@ -348,10 +350,10 @@ class PuzzleGame:
             for image in ordered_images:
                 if image in files:
                     available.append(image)
-            print(f"Images trouvées : {available}")  # Debug
+            # print(f"Images trouvées : {available}")  # Debug
         except Exception as e:
-            print(f"Erreur lors de la lecture du dossier assets : {e}")
-            print("Vérifiez que le dossier assets existe et contient des images")
+            # print(f"Erreur lors de la lecture du dossier assets : {e}")
+            # print("Vérifiez que le dossier assets existe et contient des images")
             sys.exit(1)
         return available
 
@@ -379,7 +381,7 @@ class PuzzleGame:
             # Créer une miniature de l'image
             image_path = os.path.join(self.assets_dir, image_name)
             try:
-                print(f"Chargement de l'image : {image_path}")  # Debug
+                # print(f"Chargement de l'image : {image_path}")  # Debug
                 image = Image.open(image_path)
                 # Conserver les proportions pour la miniature
                 image.thumbnail(preview_size, Image.Resampling.LANCZOS)
@@ -394,16 +396,16 @@ class PuzzleGame:
                     'image': image_surface,
                     'name': image_name
                 })
-                print(f"Image {image_name} chargée avec succès")  # Debug
+                # print(f"Image {image_name} chargée avec succès")  # Debug
             except Exception as e:
-                print(f"Erreur lors du chargement de {image_name}: {e}")
+                # print(f"Erreur lors du chargement de {image_name}: {e}")
                 continue
 
         if not buttons:
-            print("Aucune image n'a pu être chargée. Vérifiez que le dossier assets contient des images valides.")
+            # print("Aucune image n'a pu être chargée. Vérifiez que le dossier assets contient des images valides.")
             sys.exit(1)
             
-        print(f"Nombre de boutons créés : {len(buttons)}")  # Debug
+        # print(f"Nombre de boutons créés : {len(buttons)}")  # Debug
         return buttons
 
     def start_game_with_image(self, image_name):
@@ -540,13 +542,13 @@ class PuzzleGame:
             row, col = piece.current_pos
             grid[row][col] = piece.piece_id
             
-        print("\nÉtat actuel du puzzle:")
-        print("-" * (GRID_SIZE[0] * 4 + 1))
-        for row in grid:
-            print("|", end=" ")
-            for piece_id in row:
-                print(f"{piece_id:2}", end=" |")
-            print("\n" + "-" * (GRID_SIZE[0] * 4 + 1))
+        # print("\nÉtat actuel du puzzle:")
+        # print("-" * (GRID_SIZE[0] * 4 + 1))
+        # for row in grid:
+        #     print("|", end=" ")
+        #     for piece_id in row:
+        #         print(f"{piece_id:2}", end=" |")
+        #     print("\n" + "-" * (GRID_SIZE[0] * 4 + 1))
 
     def run(self):
         while self.is_running:
@@ -574,9 +576,9 @@ if __name__ == "__main__":
         game = PuzzleGame()
         game.run()
     except Exception as e:
-        print("\nUne erreur s'est produite :")
-        print(e)
-        print("\nAppuyez sur Entrée pour fermer...")
+        # print("\nUne erreur s'est produite :")
+        # print(e)
+        # print("\nAppuyez sur Entrée pour fermer...")
         input()
     finally:
         pygame.quit()
