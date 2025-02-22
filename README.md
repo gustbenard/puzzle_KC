@@ -58,7 +58,7 @@ macOS/Linux:
 pip3 install -r requirements.txt
 
 
-##Alternatively:
+## Alternatively:
 
 Windows:
 pip install pygame
