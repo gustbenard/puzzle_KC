@@ -1,28 +1,28 @@
 # Puzzle Game KC
 
-Un jeu de puzzle mettant en vedette les joueurs de la Karmine Corp de l'équipe LEC!
+A puzzle game featuring Karmine Corp players from the LEC team!
 
-# Comment jouer?
+# How to Play?
 
-1. **Menu Principal**
-   - Sélectionnez un puzzle parmi les 5 joueurs de la KC disponibles
-   - Les noms des joueurs sont affichés au-dessus de leurs images
+1. **Main Menu**
+   - Select a puzzle from the 5 available KC players
+   - Players' names are displayed above their images
 
-2. **Pendant le jeu**
-   - Cliquez sur une pièce pour la sélectionner
-   - Cliquez sur une autre pièce pour les échanger
-   - Le temps est affiché en haut à gauche
-   - Utilisez le bouton "Menu" en haut à gauche pour revenir au menu principal
+2. **During the Game**
+   - Click on a piece to select it
+   - Click on another piece to swap them
+   - The timer is displayed in the top left corner
+   - Use the "Menu" button in the top left to return to the main menu
 
-3. **Victoire**
-   - Une fois le puzzle complété, un message de victoire s'affiche
-   - Appuyez sur ESPACE pour retourner au menu
-   - Appuyez sur ÉCHAP pour quitter le jeu
+3. **Victory**
+   - Once the puzzle is completed, a victory message appears
+   - Press **SPACE** to return to the menu
+   - Press **ESC** to exit the game
 
-# Structure des fichiers
+# File Structure
 
-- `puzzle.py` : Le code principal du jeu
-- `assets/` : Dossier contenant les images des puzzles
+- `puzzle.py`: The main game code
+- `assets/`: Folder containing the puzzle images
   - KC CANNA.jpg
   - KC YIKE.webp
   - KC VLADI.jpg
@@ -33,23 +33,23 @@ Un jeu de puzzle mettant en vedette les joueurs de la Karmine Corp de l'équipe 
   - KC VLADI 2.jpg
   - KC CALISTE 2.jpg
 
-# Contrôles
+# Controls
 
-- **Clic gauche** : Sélectionner/échanger des pièces
-- **ESPACE** : Retour au menu après une victoire
-- **ÉCHAP** : Retour au menu pendant le jeu / Quitter depuis le menu
+- **Left Click**: Select/swap pieces
+- **SPACE**: Return to the menu after a victory
+- **ESC**: Return to the menu during the game / Exit from the menu
 
-# Prérequis
+# Requirements
 
 - Python 3.x
 - Pygame
 - Pillow (PIL)
 
-# Installation des dépendances
+# Installing Dependencies
 
-Pour installer les bibliothèques nécessaires, exécutez les commandes suivantes :
+To install the required libraries, run the following commands:
 
-## Vous pouvez installer les dépendances à partir du fichier requirements.txt
+## You can install dependencies from the requirements.txt file
 
 Windows:
 pip install -r requirements.txt
@@ -58,7 +58,7 @@ macOS/Linux:
 pip3 install -r requirements.txt
 
 
-## Alternativement:
+##Alternatively:
 
 Windows:
 pip install pygame
