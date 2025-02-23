@@ -51,19 +51,19 @@ To install the required libraries, run the following commands:
 
 ## You can install dependencies from the requirements.txt file
 
-Windows:
-pip install -r requirements.txt
+**Windows:**
+- pip install -r requirements.txt
 
-macOS/Linux:
-pip3 install -r requirements.txt
+**macOS/Linux:**
+- pip3 install -r requirements.txt
 
 
 ## Alternatively:
 
-Windows:
-pip install pygame
-pip install pillow
+**Windows:**
+- pip install pygame
+- pip install pillow
 
-macOS/Linux:
-pip3 install pygame
-pip3 install pillow
+**macOS/Linux:**
+- pip3 install pygame
+- pip3 install pillow
